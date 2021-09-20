@@ -9,7 +9,7 @@ pipeline {
    stage('git clone') {
          steps {
             // Get some code from a GitHub repository
-            git 'https://github.com/Pudirohith/game.git'
+            git 'https://github.com/Shilpavsqe/game.git'
         }  
       }
 	stage ('Compile and Build') {
@@ -28,18 +28,18 @@ steps {
       steps {
         sh '''
 	docker build -t pudirohith/game:v1 /var/lib/jenkins/workspace/pipeline/
-	docker tag pudirohith/game:v1 gcr.io/fluent-service-325915/game-of-life-1:v1
+	docker tag pudirohith/game:v1 gcr.io/polished-triode-325915/game-of-life-1:v1
 	'''
       }
     }
     stage ('Publish Docker Image'){
         steps {
           sh '''
-          docker push gcr.io/fluent-service-325915/game-of-life-1:v1
+          docker push gcr.io/polished-triode-325915/game-of-life-1:v1
           '''
         }
       }
-    stage ('Deploy to kubernetes'){
+    /*stage ('Deploy to kubernetes'){
         steps{
           script {
 
@@ -52,6 +52,6 @@ steps {
 
             }
        }
-    }
+    }*/
    }
 }
