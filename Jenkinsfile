@@ -43,7 +43,7 @@ steps {
         steps{
           script {
 
-            sh "kubectl config use-context gke_fluent-service-325915_us-central1-a_cluster-1"
+            sh "kubectl config use-context gke_polished-triode-325915_us-central1-a_cluster-1"
 		       // sh "export PATH=/home/jenkins/:$PATH"
 			      sh "cd ${WORKSPACE}"
 		  	    //  sh "kubectl delete -f '${WORKSPACE}'/kube/gcloud-deployment.yml"
