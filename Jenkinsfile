@@ -39,7 +39,7 @@ steps {
           '''
         }
       }
-    /*stage ('Deploy to kubernetes'){
+    stage ('Deploy to kubernetes'){
         steps{
           script {
 
@@ -52,6 +52,6 @@ steps {
 
             }
        }
-    }*/
+    }
    }
 }
